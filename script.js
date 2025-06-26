@@ -27,3 +27,32 @@ const produtos = [
         tamanho: "P"
     },
 ];
+
+const container = document.getElementById("produtos-container");
+produtos.forEach(produto => {
+    const card = document.createElement("div");
+
+    const img = document.createElement("img");
+    img.src = produto.imagem;
+    img.alt = produto.nome;
+
+     const nome = document.createElement("h2");
+    nome.textContent = produto.nome;
+
+    const preco = document.createElement("p");
+    preco.textContent = "Preço:" + produto.preço;
+
+    const tamanho = document.createElement("p");
+    tamanho.textContent = "Tamanho: " + produto.tamanho;
+
+    const botao = document.createElement("button");
+    botao.textContent = "Comprar";
+
+    card.appendChild(img);
+    card.appendChild(nome);
+    card.appendChild(preco);
+    card.appendChild(tamanho);
+    card.appendChild(botao);
+
+    container.appendChild(card);
+});
