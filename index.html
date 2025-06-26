@@ -10,6 +10,38 @@
     
 
 
+
+
+
+
+
+
+
+  <header>
+        <h1>Finalize Sua Compra</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Calcular Frete e Endereço</h2>
+            <div>
+                <label for="cepInput">Para onde enviaremos?</label>
+                <input type="text" id="cepInput" placeholder="Informe seu CEP (ex: 01001-000)" maxlength="9">
+            </div>
+            <button id="btnFinalizarCompra">
+                Verificar Endereço e Frete
+            </button>
+
+            <div id="mensagemStatus" style="display: none;"></div>
+
+            <div id="ulResult">
+            </div>
+        </section>
+
+    </main>
+   
+
     <script src="script.js"></script>
 </body>
 </html>
