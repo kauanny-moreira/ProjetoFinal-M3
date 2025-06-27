@@ -1,4 +1,73 @@
+const produtos = [
+    {
+        nome:"Jaqueta de couro preta",
+        imagem:"Imagens/download.jpg",
+        preço:"R$284,99",
+        tamanho: "G"
+    },
 
+     {
+        nome:"Vestido de amarração azul e branco",
+        imagem:"Imagens/vestido.png",
+        preço:"R$110,42",
+        tamanho: "M"
+    },
+    
+     {
+        nome:"Calça cargo jeans",
+        imagem:"Imagens/download (2).jpg",
+        preço:"R$199,99",
+        tamanho: "G"
+    },
+    
+     {
+        nome:"Calça alfaiataria preta",
+        imagem:"Imagens/download (1).jpg",
+        preço:"R$115,00",
+        tamanho: "P"
+    },
+];
+
+const container = document.getElementById("produtos-container");
+produtos.forEach(produto => {
+    const card = document.createElement("div");
+    card.classList.add("produto-card"); // Add uma classe para estilização
+
+    const img = document.createElement("img");
+    img.src = produto.imagem;
+    img.alt = produto.nome;
+
+     const nome = document.createElement("h2");
+    nome.textContent = produto.nome;
+
+    const preco = document.createElement("p");
+    preco.textContent = "Preço:" + produto.preço;
+
+    const tamanho = document.createElement("p");
+    tamanho.textContent = "Tamanho: " + produto.tamanho;
+
+    const botao = document.createElement("button");
+    botao.textContent = "Comprar";
+
+    card.appendChild(img);
+    card.appendChild(nome);
+    card.appendChild(preco);
+    card.appendChild(tamanho);
+    card.appendChild(botao);
+
+    container.appendChild(card);
+
+    botao.addEventListener('click', () => {
+                    freteSection.style.display = 'block'; // Mostra a seção de frete
+                    freteSection.scrollIntoView({ behavior: 'smooth' }); // Rola a página até a seção de frete
+                    clearResultsAndMessages(); // Limpa resultados e mensagens anteriores
+                    cepInput.value = ''; // Limpa o campo do CEP
+                });
+});
+
+
+
+// HEAD
     // consumindo API
             const regrasFrete = {
                 'SP': { valorFixo: 15.00, tempo: '2-3 dias úteis' },
@@ -14,6 +83,7 @@
             const btnFinalizarCompra = document.getElementById('btnFinalizarCompra');
             const ulResult = document.getElementById('ulResult');
             const mensagemStatus = document.getElementById('mensagemStatus');
+            const freteSection = document.getElementById('frete-section'); // A nova seção que controlaremos
 
            
             function getProcurar(cep) {
@@ -70,7 +140,7 @@
 
             btnFinalizarCompra.addEventListener('click', async () => {
                 clearResultsAndMessages();
-                const cep = cepInput.value.replace(/\D/g, '');
+                const cep = cepInput.value.replace(g, '');
 
                 if (cep.length !== 8) {
                     displayMessage('Por favor, digite um CEP válido com 8 dígitos.', 'error');
@@ -119,5 +189,5 @@
             });
 
             cepInput.addEventListener('focus', () => {
-                clearResultsAndMessages();
-            });
+                clearResultsAndMessages();}
+            );
