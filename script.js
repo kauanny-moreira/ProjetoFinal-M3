@@ -1,10 +1,5 @@
 
     // consumindo API
-
-      document.addEventListener('DOMContentLoaded', () => {
-           
-
-            
             const regrasFrete = {
                 'SP': { valorFixo: 15.00, tempo: '2-3 dias úteis' },
                 'MG': { valorFixo: 20.00, tempo: '3-5 dias úteis' },
@@ -126,4 +121,3 @@
             cepInput.addEventListener('focus', () => {
                 clearResultsAndMessages();
             });
-        });
