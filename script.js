@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const produtos = [
     {
         nome:"Jaqueta de couro preta",
@@ -140,7 +142,7 @@ produtos.forEach(produto => {
 
             btnFinalizarCompra.addEventListener('click', async () => {
                 clearResultsAndMessages();
-                const cep = cepInput.value.replace(g, '');
+                const cep = cepInput.value.replace(/\D/g, "");
 
                 if (cep.length !== 8) {
                     displayMessage('Por favor, digite um CEP válido com 8 dígitos.', 'error');
@@ -179,7 +181,7 @@ produtos.forEach(produto => {
             });
 
             cepInput.addEventListener('input', () => {
-                const value = cepInput.value.replace(/\D/g, '');
+                 const cep = cepInput.value.replace(/\D/g, '');
                 let formattedValue = value;
                 if (value.length > 5) {
                     formattedValue = `${value.substring(0, 5)}-${value.substring(5, 8)}`;
@@ -190,4 +192,4 @@ produtos.forEach(produto => {
 
             cepInput.addEventListener('focus', () => {
                 clearResultsAndMessages();}
-            );
+            );});
