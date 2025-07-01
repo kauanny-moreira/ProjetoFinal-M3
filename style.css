@@ -181,3 +181,14 @@ body {
         transform: translateY(-2px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
+@media (max-width: 768px) {
+        header h1 {
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1em;
+        }
+        main section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
