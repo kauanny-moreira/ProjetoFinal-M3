@@ -192,3 +192,79 @@ body {
             font-size: 2em;
             margin-bottom: 30px;
         }
+      #produtos-container {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 0 15px;
+        }
+        .produto-card img {
+            height: 250px;
+        }
+        .produto-card h2 {
+            font-size: 1.2em;
+        }
+        .produto-card p {
+            font-size: 0.9em;
+        }
+        .produto-card button {
+            font-size: 1em;
+            padding: 10px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header {
+            padding: 20px 10px;
+        }
+        header h1 {
+            font-size: 2em;
+        }
+        header p {
+            font-size: 0.9em;
+        }
+        main section h2 {
+            font-size: 1.8em;
+            [12:42, 30/06/2025] +55 31 8489-1954: margin-bottom: 25px;
+    }
+    #frete-section label {
+        font-size: 1em;
+    }
+    #cepInput {
+        width: 90%;
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+    #btnFinalizarCompra {
+        font-size: 1.1em;
+        padding: 12px 25px;
+    }
+    #mensagemStatus, #ulResult {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #frete-section {
+        padding: 25px 15px;
+        margin: 30px auto;
+        border-radius: 10px;
+    }
+    #frete-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    #cepInput {
+        width: 95%;
+        font-size: 0.95em;
+        padding: 10px;
+    }
+    #btnFinalizarCompra {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    #mensagemStatus, #ulResult {
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+}
