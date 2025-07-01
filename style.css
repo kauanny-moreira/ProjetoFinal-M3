@@ -112,10 +112,24 @@ body {
         padding: 0 20px;
         margin-bottom: 50px;
     }
+    .produto-card {
+        background-color: #ffffff; 
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px; 
+    }
+
+    .produto-card:hover {
+        transform: translateY(-8px); 
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
 
    
-    
-
     .produto-card img {
         width: 100%;
         height: 400px ;
