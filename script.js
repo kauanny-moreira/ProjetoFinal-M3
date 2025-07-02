@@ -66,7 +66,7 @@
             };
             
             function getProcurar(cep) {
-                const ceps = fetch (`https://viacep.com.br/ws/${cep}/json/`)
+               return fetch (`https://viacep.com.br/ws/${cep}/json/`)
                     .then(res => {
                         if (!res.ok) {
                             throw new Error('Falha na busca do CEP. Verifique sua conexão.');
